@@ -19,7 +19,6 @@
     - nodejs
     - mysql
      
-
   - name: create expense user
     ansible.builtin.user:
       name: expense
@@ -62,7 +61,6 @@
       login_password: "{{ mysql_root_password }}"
       login_host: "{{ login_host }}"
       target: /app/schema/backend.sql
-      name: all
-      state: import
+      
 
   
